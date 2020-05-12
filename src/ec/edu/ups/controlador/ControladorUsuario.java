@@ -40,7 +40,18 @@ public class ControladorUsuario implements IControlador{
      */
     @Override
     public void create(Usuario persona) { 
-        personas.add(persona);
+        boolean repetido=false;
+        for(Usuario personaRead : personas){
+            if(personaRead!=null &&  personaRead.equals(persona)){
+                repetido=true;
+            }         
+        } 
+        if(!repetido){
+            personas.add(persona);
+            System.out.println("USUARIO REGISTRADO");
+        }else{
+            System.out.println("CEDULA Y CORREO YA REGISTRADOS");
+        }
     }
     /**
      * Metodo read.

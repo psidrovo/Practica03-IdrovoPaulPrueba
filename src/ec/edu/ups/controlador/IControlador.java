@@ -15,7 +15,6 @@ import ec.edu.ups.modelo.Usuario;
  * @author Paul Idrovo
  */
 public interface IControlador {    
-    public static final int MAX_OBJECTS=10;
     public void create(Usuario obj);
     public Usuario read(Usuario obj);
 }
